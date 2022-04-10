@@ -7,9 +7,9 @@ export default function Navbar() {
 		<div className='navbar'>
 			<Link to='/' ><img className='navbar-avatar' src='/avatar.png' /></Link>
 			<div className='navbar-links'>
-				<NavLink className='navbar-links-item' to='/about/' >ABOUT</NavLink>
-				<NavLink className='navbar-links-item' to='/blog/' >BLOG</NavLink>
-				<NavLink className='navbar-links-item' to='/project/' >PROJECTS</NavLink>
+				<NavLink className='navbar-links-item navbar-links-item-first' to='/about/' >ABOUT</NavLink>
+				<NavLink className='navbar-links-item navbar-links-item-second' to='/blog/' >BLOG</NavLink>
+				<NavLink className='navbar-links-item navbar-links-item-third' to='/project/' >PROJECTS</NavLink>
 			</div>
 		</div>
 	);
