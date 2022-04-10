@@ -1,0 +1,19 @@
+.hello-world-greeting {
+	font-size: 3.5em;
+	font-weight: bold;
+}
+
+.hello-world-introduction {
+	font-size: 2em;
+}
+
+.hello-world-introduction-name {
+	font-size: 1em;
+	color: #dd7261;
+}
+
+.hello-world-introduction-appendix {
+	font-size: 1em;
+	color: gray;
+	font-style: italic;
+}

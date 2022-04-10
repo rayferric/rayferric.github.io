@@ -1,3 +1,41 @@
-.navbar-link {
-	margin: 10px;
+.navbar {
+	position: sticky;
+	z-index: 3;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: transparent;
+}
+
+.navbar-avatar {
+	height: 70px;
+	border-radius: 100%;
+	padding: 10px;
+	margin-left: 10px;
+	background-color: transparent;
+}
+
+.navbar-links {
+	padding: 20px;
+	background-color: transparent;
+}
+
+.navbar-links-item {
+	font-size: 1.25em;
+	padding: 10px;
+	margin: 20px;
+	text-decoration: underline transparent solid 0.2em;
+	text-underline-offset: 0.4em;
+	font-weight: bold;
+	background: linear-gradient(to left, #eba973 0,#bb4f4e 300px);
+	background-attachment: fixed;
+	background-clip: text;
+	color: transparent;
+	transition: 0.1s;
+}
+
+.navbar-links-item:hover, .navbar-links-item.active {
+	text-decoration: underline #DD726188 solid 0.2em;
+	text-underline-offset: 0.4em;
 }

@@ -1,3 +1,5 @@
+import './index.css'
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
@@ -6,6 +8,7 @@ import {
 	Route
 } from 'react-router-dom';
 
+import Vignette from './common/vignette';
 import Navbar from './common/navbar';
 
 import Home from './page/home';
@@ -21,14 +24,15 @@ ReactDOM.createRoot(
 ).render(
 	<React.StrictMode>
 		<Router>
+			<Vignette />
 			<Navbar />
 			<Routes>
-     			<Route path="/" element={<Home />} />
+     			{/* <Route path="/" element={<Home />} /> */}
 				<Route path="/about/" element={<About />} />
-				<Route path="/blog/" element={<Blog />} />
+				{/* <Route path="/blog/" element={<Blog />} />
 				<Route path="/blog/:id/" element={<BlogView />} />
 				<Route path="/project/" element={<Project />} />
-				<Route path="/project/:id/" element={<ProjectView />} />
+				<Route path="/project/:id/" element={<ProjectView />} /> */}
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</Router>

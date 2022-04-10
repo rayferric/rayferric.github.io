@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+:root {
+    --background-color: #1B1E22;
+}
+
+* {
+	margin: 0;
+	background-color: var(--background-color);
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 16px;
+	color: white;
+}

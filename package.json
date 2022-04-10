@@ -2,7 +2,7 @@
   "name": "rayferric.github.io",
   "version": "0.1.0",
   "description": "My personal webpage.",
-  "main": "index.js",
+  "main": "./src/index.jsx",
   "repository": "https://github.com/rayferric/rayferric.github.io.git",
   "author": "rayferric <63957587+rayferric@users.noreply.github.com>",
   "license": "MIT",
