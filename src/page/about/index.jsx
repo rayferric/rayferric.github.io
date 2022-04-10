@@ -20,23 +20,23 @@ export default function About() {
 						<a className='about-greeting-content-contact-item
 									about-greeting-content-contact-item-github
 									fa-brands fa-github'
-								href='https://github.com/rayferric/' />
+								href='https://github.com/rayferric/' target='_blank' />
 						<a className='about-greeting-content-contact-item
 									about-greeting-content-contact-item-email
 									fa-solid fa-at'
-								href='mailto:&#x72;&#x61;&#x79;&#x66;&#x65;&#x72;&#x72;&#x69;&#x63;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;' />
+								href='mailto:&#x72;&#x61;&#x79;&#x66;&#x65;&#x72;&#x72;&#x69;&#x63;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;' target='_blank' />
 						<a className='about-greeting-content-contact-item
 									about-greeting-content-contact-item-linkedin
 									fa-brands fa-linkedin-in'
-								href='https://www.linkedin.com/in/rayferric/' />
+								href='https://www.linkedin.com/in/rayferric/' target='_blank' />
 						<a className='about-greeting-content-contact-item
 									about-greeting-content-contact-item-twitter
 									fa-brands fa-twitter'
-								href='https://twitter.com/rayferric/' />
+								href='https://twitter.com/rayferric/' target='_blank' />
 						<a className='about-greeting-content-contact-item
 									about-greeting-content-contact-item-youtube
 									fa-brands fa-youtube'
-								href='https://www.youtube.com/channel/UCEXSCnKng23b0AukQ3JpI4w/' />
+								href='https://www.youtube.com/channel/UCEXSCnKng23b0AukQ3JpI4w/' target='_blank' />
 					</div>
 				</div>
 			</div>
