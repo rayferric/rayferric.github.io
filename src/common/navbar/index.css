@@ -1,8 +1,11 @@
 .navbar {
+	position: absolute;
+	z-index: 2;
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
+	background-color: transparent;
 }
 
 @media only screen and (max-width: 510px) {
@@ -21,11 +24,12 @@
 	height: 70px;
 	border-radius: 100%;
 	padding: 10px;
-	margin-left: 10px;
+	background-color: transparent;
 }
 
 .navbar-links {
 	padding: 20px;
+	background-color: transparent;
 }
 
 .navbar-links-item {
@@ -36,6 +40,7 @@
 	text-underline-offset: 0.4em;
 	font-weight: bold;
 	transition: 0.1s;
+	background-color: transparent;
 }
 
 .navbar-links-item-first {

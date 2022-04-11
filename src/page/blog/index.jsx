@@ -15,7 +15,9 @@ export default function Blog() {
 	
 	return (
 		<div className='blog'>
-			{posts ? posts.map((id, i) => <Post key={i} type='blog' id={id}/>) : 'Loading...'}
+			<div className='blog-grid'>
+				{posts ? posts.map((id, i) => <Post key={i} type='blog' id={id}/>) : 'Loading...'}
+			</div>
 		</div>
 	);
 }

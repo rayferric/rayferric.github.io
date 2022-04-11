@@ -1,8 +1,14 @@
 .blog {
-	width: 90%;
-	margin-left: 5%;
+	padding-top: 200px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.blog-grid {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
+	max-width: 1500px;
 }

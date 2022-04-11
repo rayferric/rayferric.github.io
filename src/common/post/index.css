@@ -1,11 +1,22 @@
 .post {
-	margin: 10px 70px 10px 70px;
 	transition: 0.1s;
 	text-decoration: none;
 }
 
 .post:hover {
 	scale: 1.03;
+}
+
+@media only screen and (max-width: 600px) {
+	.post {
+		padding: 10px 0px 10px 0px;
+	}
+}
+
+@media only screen and (min-width: 601px) {
+	.post {
+		padding: 10px 50px 10px 50px;
+	}
 }
 
 @media only screen and (max-width: 510px) {
