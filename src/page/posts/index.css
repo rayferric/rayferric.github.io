@@ -1,0 +1,14 @@
+.posts {
+	padding-top: 150px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.posts-grid {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 1500px;
+}

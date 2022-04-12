@@ -2,23 +2,23 @@
 	font-weight: bold;
 }
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 550px) {
 	.hello-world-greeting {
-		font-size: 2.25em;
+		font-size: 36px;
 	}
 
 	.hello-world-introduction {
-		font-size: 1em;
+		font-size: 18px;
 	}
 }
 
-@media only screen and (min-width: 531px) {
+@media only screen and (min-width: 551px) {
 	.hello-world-greeting {
-		font-size: 3.5em;
+		font-size: 60px;
 	}
 	
 	.hello-world-introduction {
-		font-size: 2em;
+		font-size: 28px;
 	}
 }
 

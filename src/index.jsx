@@ -13,11 +13,9 @@ import Navbar from './common/navbar';
 import Footer from './common/footer';
 
 import Home from './page/home';
+import Posts from './page/posts';
+import PostView from './page/post-view';
 import About from './page/about';
-import Blog from './page/blog';
-import BlogView from './page/blog-view';
-import Project from './page/project';
-import ProjectView from './page/project-view';
 import NotFound from './page/not-found';
 
 // Sanitize URL
@@ -42,12 +40,10 @@ ReactDOM.render(
 			<Vignette />
 			<Navbar />
 			<Routes>
-     			{/* <Route path="/" element={<Home />} /> */}
+				<Route path="/" element={<Home />} />
+				<Route path="/posts/" element={<Posts />} />
+				<Route path="/posts/:id/" element={<PostView />} />
 				<Route path="/about/" element={<About />} />
-				<Route path="/blog/" element={<Blog />} />
-				<Route path="/blog/:id/" element={<BlogView />} />
-				{/* <Route path="/project/" element={<Project />} />
-				<Route path="/project/:id/" element={<ProjectView />} /> */}
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
