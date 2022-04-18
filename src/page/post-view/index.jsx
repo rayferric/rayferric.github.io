@@ -27,7 +27,7 @@ function highlight(str, lang) {
 	return '';
 };
 
-export default function postView() {
+export default function PostView() {
 	const params = useParams();
 	const [metadata, setMetadata] = useState(null);
 	const [content, setContent] = useState(null);

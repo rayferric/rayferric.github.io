@@ -3,7 +3,7 @@ import './index.css'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-	HashRouter as Router,
+	BrowserRouter as Router,
 	Routes,
 	Route
 } from 'react-router-dom';
@@ -20,17 +20,17 @@ import NotFound from './page/not-found';
 
 // Sanitize URL
 
-if (!window.location.hash.startsWith('#/'))
-	window.location.replace('/#/');
-else if (!window.location.hash.endsWith('/'))
-	window.location.replace('/' + window.location.hash + '/');
-else if (window.location.pathname != '/')
-	window.location.replace('/' + window.location.hash);
+// if (!window.location.hash.startsWith('#/'))
+// 	window.location.replace('/#/');
+// else if (!window.location.hash.endsWith('/'))
+// 	window.location.replace('/' + window.location.hash + '/');
+// else if (window.location.pathname != '/')
+// 	window.location.replace('/' + window.location.hash);
 
-while (window.location.hash[2] == '/')
-	window.location.replace('/#' + window.location.hash.substring(2));
-while (window.location.hash[window.location.hash.length - 2] == '/')
-	window.location.replace('/' + window.location.hash.substring(0, window.location.hash.length - 2));
+// while (window.location.hash[2] == '/')
+// 	window.location.replace('/#' + window.location.hash.substring(2));
+// while (window.location.hash[window.location.hash.length - 2] == '/')
+// 	window.location.replace('/' + window.location.hash.substring(0, window.location.hash.length - 2));
 
 // Render application
 

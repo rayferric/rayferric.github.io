@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 import Post from '../../common/post';
 
-export default function posts() {
+export default function Posts() {
 	const [posts, setPosts] = useState(null);
 
 	useEffect(() => {

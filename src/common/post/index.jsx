@@ -12,7 +12,7 @@ export default function Post(props) {
 		fetch(`/posts/${props.id}/metadata.json`)
   			.then(response => response.json())
 			.then(json => setMetadata(json));
-	}, []);
+	});
 
 	const postUrl = `/posts/${props.id}/`;
 	const coverUrl = `/posts/${props.id}/cover.png`;
@@ -21,7 +21,7 @@ export default function Post(props) {
 
 	return (
 		<Link className='post' to={ postUrl }>
-			<img className='post-cover' src={ coverUrl } />
+			<img className='post-cover' src={ coverUrl } alt='Cover' />
 			<div className='post-info'>
 				<p className='post-info-title'>{ metadata ? metadata.title : 'Loading...' }</p>
 				<p className='post-info-meta'>{ metadata ? PostTypes[metadata.type].icon  : 'Loading...'  } &nbsp; { metadata ? PostTypes[metadata.type].name  : 'Loading...'  } &nbsp;&nbsp;&nbsp; <i className='post-info-meta-symbol fa-solid fa-calendar'></i> &nbsp; { created }</p>

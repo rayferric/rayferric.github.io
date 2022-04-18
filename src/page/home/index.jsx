@@ -17,7 +17,7 @@ export default function Home() {
 	return (
 		<div className='home'>
 			<div className='home-greeting'>
-				<img className='home-greeting-avatar' src='/avatar.png' />
+				<img className='home-greeting-avatar' src='/avatar.png' alt='Avatar' />
 				<div className='home-greeting-content'>
 					<HelloWorld />
 					<div className='home-greeting-content-description'>
