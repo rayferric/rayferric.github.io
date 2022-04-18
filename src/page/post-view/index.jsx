@@ -1,10 +1,11 @@
 import './index.css'
 
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 import Markdown from 'react-remarkable';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/rainbow.css';
+import { Utterances } from 'utterances-react-component';
 
 import PostTypes from '../../post-types';
 
@@ -64,6 +65,11 @@ export default function postView() {
 					</Markdown>
 				</div>
 			</div>
+			<Utterances
+					repo='rayferric/rayferric.github.io'
+					issueTerm='pathname'
+					theme='dark-blue'
+			/>
 		</div>
 	);
 }
