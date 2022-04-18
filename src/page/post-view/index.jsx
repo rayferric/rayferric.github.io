@@ -37,7 +37,7 @@ export default function PostView() {
   			.then(response => response.json())
 			.then(json => setMetadata(json));
 
-		fetch(`/posts/${params.id}/index.md`)
+		fetch(`/posts/${params.id}/post.md`)
 			.then(response => response.text())
 			.then(text => setContent(text));
 	}, [params.id]);
