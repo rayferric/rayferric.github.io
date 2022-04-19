@@ -1,6 +1,7 @@
 import './index.css';
 
 import { useState, useEffect } from 'react';
+import Twemoji from 'react-twemoji';
 
 import Post from '../../common/post';
 
@@ -15,9 +16,11 @@ export default function Posts() {
 	
 	return (
 		<div className='posts'>
-			<div className='posts-grid'>
-				{posts ? posts.map((id, i) => <Post key={i} id={id}/>) : 'Loading...'}
-			</div>
+			<Twemoji options={{ className: 'twemoji' }}>
+				<div className='posts-grid'>
+					{posts ? posts.map((id, i) => <Post key={i} id={id}/>) : 'Loading...'}
+				</div>
+			</Twemoji>
 		</div>
 	);
 }

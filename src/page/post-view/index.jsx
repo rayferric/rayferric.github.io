@@ -6,6 +6,7 @@ import Markdown from 'react-remarkable';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/rainbow.css';
 import { Utterances } from 'utterances-react-component';
+import Twemoji from 'react-twemoji';
 
 import PostTypes from '../../post-types';
 
@@ -49,27 +50,29 @@ export default function PostView() {
 
 	return (
 		<div className='post-view'>
-			<div className='post-view-cover'>
-				<div className='post-view-cover-image' style={ coverStyle } />
-				<div className='post-view-cover-overlay' />
-			</div>
-			<div className='post-view-info'>
-				<p className='post-view-info-title'>{ metadata ? metadata.title : 'Loading...' }</p>
-				<p className='post-view-info-description'>{ metadata ? metadata.description : 'Loading...' }</p>
-				<p className='post-view-info-meta'>{ metadata ? PostTypes[metadata.type].icon  : 'Loading...'  } &nbsp; { metadata ? PostTypes[metadata.type].name  : 'Loading...'  } &nbsp;&nbsp;&nbsp; <i className='post-view-info-meta-symbol fa-solid fa-calendar' /> &nbsp; { created }</p>
-			</div>
-			<div className='post-view-display'>
-				<div className='post-view-display-content'>
-					<Markdown options={{highlight}}>
-						{ content ? content : 'Loading...' }
-					</Markdown>
+			<Twemoji options={{ className: 'twemoji' }}>
+				<div className='post-view-cover'>
+					<div className='post-view-cover-image' style={ coverStyle } />
+					<div className='post-view-cover-overlay' />
 				</div>
-			</div>
-			<Utterances
-					repo='rayferric/rayferric.github.io'
-					issueTerm='pathname'
-					theme='dark-blue'
-			/>
+				<div className='post-view-info'>
+					<p className='post-view-info-title'>{ metadata ? metadata.title : 'Loading...' }</p>
+					<p className='post-view-info-description'>{ metadata ? metadata.description : 'Loading...' }</p>
+					<p className='post-view-info-meta'>{ metadata ? PostTypes[metadata.type].icon  : 'Loading...'  } &nbsp; { metadata ? PostTypes[metadata.type].name  : 'Loading...'  } &nbsp;&nbsp;&nbsp; <i className='post-view-info-meta-symbol fa-solid fa-calendar' /> &nbsp; { created }</p>
+				</div>
+				<div className='post-view-display'>
+					<div className='post-view-display-content'>
+						<Markdown options={{highlight}}>
+							{ content ? content : 'Loading...' }
+						</Markdown>
+					</div>
+				</div>
+				<Utterances
+						repo='rayferric/rayferric.github.io'
+						issueTerm='pathname'
+						theme='dark-blue'
+				/>
+			</Twemoji>
 		</div>
 	);
 }

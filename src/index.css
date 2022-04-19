@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 
-@font-face {
-	font-family: 'Twemoji';
-	src: url('/public/twemoji.ttf') format('opentype');
-  }
-
 :root {
 	--background-color: #13161d;
 }
@@ -15,8 +10,15 @@
 }
 
 body {
-	font-family: 'Roboto Condensed', sans-serif, 'JetBrains Mono', 'Twemoji', 'Font Awesome 6 Brands', 'Font Awesome 6 Free Solid';
+	font-family: 'Roboto Condensed', sans-serif, 'JetBrains Mono', 'Font Awesome 6 Brands', 'Font Awesome 6 Free Solid';
 	font-size: 17px;
 	color: white;
 	background-color: var(--background-color);
+}
+
+img.twemoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 0.05em 0 0.1em;
+	vertical-align: -0.1em;
 }

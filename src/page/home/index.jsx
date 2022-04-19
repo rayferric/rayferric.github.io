@@ -1,6 +1,7 @@
 import './index.css';
 
 import { useState, useEffect } from 'react';
+import Twemoji from 'react-twemoji';
 
 import HelloWorld from '../../common/hello-world';
 import Post from '../../common/post';
@@ -16,20 +17,22 @@ export default function Home() {
 
 	return (
 		<div className='home'>
-			<div className='home-greeting'>
-				<img className='home-greeting-avatar' src='/avatar.png' alt='Avatar' />
-				<div className='home-greeting-content'>
-					<HelloWorld />
-					<div className='home-greeting-content-description'>
-						Take a look at some of my featured posts:
+			<Twemoji options={{ className: 'twemoji' }}>
+				<div className='home-greeting'>
+					<img className='home-greeting-avatar' src='/avatar.png' alt='Avatar' />
+					<div className='home-greeting-content'>
+						<HelloWorld />
+						<div className='home-greeting-content-description'>
+							Take a look at some of my featured posts:
+						</div>
 					</div>
 				</div>
-			</div>
-			<div className='home-posts'>
-				<div className='home-posts-grid'>
-					{posts ? posts.map((id, i) => <Post key={i} id={id}/>) : 'Loading...'}
+				<div className='home-posts'>
+					<div className='home-posts-grid'>
+						{posts ? posts.map((id, i) => <Post key={i} id={id}/>) : 'Loading...'}
+					</div>
 				</div>
-			</div>
+			</Twemoji>
 		</div>
 	);
 }
