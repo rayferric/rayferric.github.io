@@ -56,13 +56,18 @@ export default function PostView() {
 					<div className='post-view-cover-overlay' />
 				</div>
 				<div className='post-view-info'>
-					<p className='post-view-info-title'>{ metadata ? metadata.title : 'Loading...' }</p>
-					<p className='post-view-info-description'>{ metadata ? metadata.description : 'Loading...' }</p>
-					<p className='post-view-info-meta'>{ metadata ? PostTypes[metadata.type].icon  : 'Loading...'  } &nbsp; { metadata ? PostTypes[metadata.type].name  : 'Loading...'  } &nbsp;&nbsp;&nbsp; <i className='post-view-info-meta-symbol fa-solid fa-calendar' /> &nbsp; { created }</p>
+					<div className='post-view-info-content'>
+						<p className='post-view-info-content-title'>{ metadata ? metadata.title : 'Loading...' }</p>
+						<p className='post-view-info-content-description'>{ metadata ? metadata.description : 'Loading...' }</p>
+						<p className='post-view-info-content-meta'>{ metadata ? PostTypes[metadata.type].icon  : 'Loading...'  } &nbsp; { metadata ? PostTypes[metadata.type].name  : 'Loading...'  } &nbsp;&nbsp;&nbsp; <i className='post-view-info-meta-symbol fa-solid fa-calendar' /> &nbsp; { created }</p>
+					</div>
 				</div>
 				<div className='post-view-display'>
 					<div className='post-view-display-content'>
-						<Markdown options={{highlight}}>
+						<Markdown options={{
+							html: true,
+							highlight: highlight
+						}}>
 							{ content ? content : 'Loading...' }
 						</Markdown>
 					</div>

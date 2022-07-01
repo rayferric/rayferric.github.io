@@ -2,13 +2,13 @@
 	position: absolute;
 	top: 0;
 	width: 100%;
-	height: 800px;
-	background: linear-gradient(to top, var(--background-color), transparent 50%);
+	height: 1000px;
+	background: linear-gradient(to top, var(--background-color), transparent 75%);
 }
 
 .post-view-cover-image {
 	width: 100%;
-	height: 800px;
+	height: 1000px;
 	background-position: center;
 }
 
@@ -25,19 +25,24 @@
 }
 
 .post-view-info {
-	position: absolute;
-	background-color: transparent;
-	top: 600px;
-	left: max(calc((100% - 1200px) / 2), 30px);
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
-.post-view-info-title {
+.post-view-info-content {
+	width: 1200px;
+	padding: 30px;
+}
+
+.post-view-info-content-title {
 	color: white;
 	font-size: 4em;
 	background-color: transparent;
 }
 
-.post-view-info-description {
+.post-view-info-content-description {
 	margin-top: 20px;
 	color: #CCC;
 	font-size: 1.25em;
@@ -45,7 +50,7 @@
 	background-color: transparent;
 }
 
-.post-view-info-meta {
+.post-view-info-content-meta {
 	color: gray;
 	font-size: 1em;
 	margin-left: 10px;
@@ -59,7 +64,36 @@
 	background-color: transparent;
 }
 
+@media only screen and (max-width: 550px) {
+	.post-view-cover-overlay {
+		height: 500px;
+	}
+
+	.post-view-cover-image {
+		height: 500px;
+	}
+
+	.post-view-info {
+		margin-top: -200px;
+	}
+}
+
+@media only screen and (min-width: 551px) {
+	.post-view-cover-overlay {
+		height: 1000px;
+	}
+
+	.post-view-cover-image {
+		height: 1000px;
+	}
+
+	.post-view-info {
+		margin-top: -400px;
+	}
+}
+
 .post-view-display {
+	position: relative;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -67,7 +101,7 @@
 
 .post-view-display-content {
 	width: 1200px;
-	padding: 30px;
+	padding: 0 30px 0 30px;
 }
 
 .post-view-display-content h1 {
