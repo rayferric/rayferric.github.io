@@ -18,6 +18,10 @@ export default function Post(props) {
 	const coverUrl = `/posts/${props.id}/cover.png`;
 	const created = metadata ? new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }
 			).format(new Date(metadata.created)) : 'Loading...';
+	
+	let description = metadata ? metadata.description : 'Loading...';
+	if (description.length > 64)
+		description = description.substring(0, 61).trim() + '...';
 
 	return (
 		<Link className='post' to={ postUrl }>
@@ -25,7 +29,7 @@ export default function Post(props) {
 			<div className='post-info'>
 				<p className='post-info-title'>{ metadata ? metadata.title : 'Loading...' }</p>
 				<p className='post-info-meta'>{ metadata ? PostTypes[metadata.type].icon  : 'Loading...'  } &nbsp; { metadata ? PostTypes[metadata.type].name  : 'Loading...'  } &nbsp;&nbsp;&nbsp; <i className='post-info-meta-symbol fa-solid fa-calendar'></i> &nbsp; { created }</p>
-				<p className='post-info-description'>{ metadata ? metadata.description : 'Loading...' }</p>
+				<p className='post-info-description'>{ description }</p>
 			</div>
 		</Link>
 	);

@@ -78,15 +78,15 @@
 
 @media only screen and (min-width: 551px) {
 	.post-view-cover-overlay {
-		height: 1000px;
+		height: 800px;
 	}
 
 	.post-view-cover-image {
-		height: 1000px;
+		height: 800px;
 	}
 
 	.post-view-info {
-		margin-top: -400px;
+		margin-top: -300px;
 	}
 }
 

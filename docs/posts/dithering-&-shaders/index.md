@@ -125,7 +125,7 @@ First of all, what does *quantized* even mean? [Wikipedia defines qunatization a
 The function accepts three parameters: 
 - The first parameter to this function is an `in float value`. This is the unconstrained 32-bit color we want the user to perceive. It must confine in the standard range [0, 1].
 - Next, there is an `in ivec2 pixelPos`. The pixel position is needed here to select appropriate value from the Bayer matrix virtually tiled over the screen.
-- The last parameter is `quantizedMax`. It's the number of quantized values we want to divide the mentioned 32-bit floating point range into minus one. For an 8-bit display output one would set it to `2^8 - 1 = 255`.
+- The last parameter is `quantizedMax`. It's the number of quantized values we want to divide the mentioned 32-bit floating point [0, 1] range into, minus one. For an 8-bit display output one would set it to `2^8 - 1 = 255`.
 
 The first step is to obtain the closest quantized value available below the exact value, the `float floorValue`.
 Next we compute the distance of this quantized value from the original value. We also fetch `float edge` from the bayer matrix of choice. The final step is to choose a quantized value either from below or above the original input by comparing computed distance to the predefined edge-distance. The `+ step(...)` trick in the code above can alternatively be written down using the ternary operator where `floorValue + 1.0` is simply the next available quantized value after `floorValue`:
@@ -160,7 +160,7 @@ And that's all. Thanks for reading!
 
 - Bryce Bayer - **["An optimum method for two-level rendition of continuous-tone pictures"](https://web.archive.org/web/20130512190753/http://white.stanford.edu/~brian/psy221/reader/Bayer.1973.pdf)**
 
-All external images in this article are used only for citation and under fair use guidelines:
+All external images in this article are used solely for illustration and under fair use guidelines:
 - **["Dark forest environment"](https://www.artstation.com/artwork/zALO4q/)** by Eric Gagnon @ Art Station
 - Cutscene Photo from "Ultima VI: The False Prophet" by Origin Systems
 - **["Suburban Landscape"](https://www.reddit.com/r/PixelArt/comments/vgm7yn/suburban_landscape/)** by u/kalamplee @ Reddit
