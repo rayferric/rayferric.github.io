@@ -22,7 +22,7 @@ All this effect does is it adds slight noise to color gradients so the human eye
     </div>
 </div>
 
-As you can see, in such detailed images dithering result is almost indistinguishable from the original image.
+As you can see, in such detailed images dithering result is almost indistinguishable from the original image while naive color depth reduction resulted in some awful banding in the moonlight glimmer.
 Color depth in above example was reduced from 8 bits down to just 3, so dithering can also be used to compress pictures and this technique is indeed very often used to reduce size of GIFs.
 
 Ordered dithering is a technique pariticularly known for its broad use in the past when low color depth displays were commonly in use. It allowed human eye to perceive more colors than a screen was really able to support. It might not be obvious at first, but dithering is still commonly used even today in high fidelity computer graphics to reduce banding and low-precision artifacts, which turn out to appear even with the modern 8-bit displays. Ordered dithering is also a great way to obtain specific aesthetic in pixel art.
@@ -109,7 +109,7 @@ float dither4X4(in float value, in ivec2 pixelPos, in int quantizedMax) {
 The short description of the above routine is that it returns a quantized value determined by the tiled bayer matrix' value at pixel's position.
 At first glance this explanation might be difficult to make sense of, so I will break it down for easy digestion.
 
-First of all, what does *quantized* even mean? [Wikipedia defines qunatization as "the process of constraining an input from a continuous or otherwise large set of values (such as the real numbers) to a discrete set (such as the integers)."](https://en.wikipedia.org/wiki/Quantization/) So it's really just a fancy word for limiting the number of distinct values a variable can have. In the world of computing everything is quantized. Particularly digital color values are always quantized because computers only use a limited amount of bits per value. So in your shaders with 32-bit floating point values this quantization is almost invisible, but while outputting to an 8-bit display, we're restricted to only 256 distinct values per color channel.
+First of all, what does *quantized* even mean? [Wikipedia defines qunatization as "the process of constraining an input from a continuous or otherwise large set of values (such as the real numbers) to a discrete set (such as the integers)."](https://en.wikipedia.org/wiki/Quantization) So it's really just a fancy word for limiting the number of distinct values a variable can have. In the world of computing everything is quantized. Particularly digital color values are always quantized because computers only use a limited amount of bits per value. So in your shaders with 32-bit floating point values this quantization is almost invisible, but while outputting to an 8-bit display, we're restricted to only 256 distinct values per color channel.
 
 <div style="width: 100%; display: flex; flex-flow: row wrap; justify-content: center;">
 	<div style="display: flex; flex-flow: column nowrap; align-items: center; margin: 20px;">
