@@ -1,0 +1,8 @@
+version: '3'
+services:
+  rayferric.xyz:
+    build:
+      context: .
+    ports:
+      - 8080:80
+    restart: always
