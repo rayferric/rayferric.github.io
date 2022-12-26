@@ -1,6 +1,0 @@
-{
-	"title": "Dithering & Shaders",
-	"type": "blog",
-	"created": "2022-06-30",
-	"description": "A quick introduction to ordered dithering and its use in GPU programming."
-}
