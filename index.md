@@ -9,7 +9,11 @@ layout: default
 
 Witaj na tymczasowej stronie zastępczej stworzonej tylko i wyłącznie po to by spełnić wymagania punktu 1.f.
 
-Głównym zadaniem tej strony będzie przedstawienie (3.c.) procesu deploymentu mojej [**prawdziwej strony**](https://alt.rayferric.xyz) przy użyciu usługi Microsoft Azure (3.a.).
+Głównym zadaniem tej strony będzie przedstawienie (3.c.) procesu deploymentu mojej [**prawdziwej strony**](https://rayferric.xyz) przy użyciu usługi Microsoft Azure (3.a.).
+
+### Uwaga
+
+Jest to opis procesu umieszczania strony na Microsoft Azure pod adresem `alt.rayferric.xyz`, lecz strona została później zaktualizowana i przeniesiona na serwery Oracle pod adres `rayferric.xyz`. Hiperłącza w tym artykule zostały zaktualizowane tak by wskazywać na zmienioną stronę, a cała reszta pozostała bez zmian.
 
 ### Zastosowane Technologie
 
@@ -66,7 +70,7 @@ Ostatnim krokiem było napisanie oraz skonteneryzowanie przeze mnie zastępczego
 
 ### Podsumowanie
 
-Gotową stronę można odwiedzić klikając [**tutaj**](https://alt.rayferric.xyz).
+Gotową stronę można odwiedzić klikając [**tutaj**](https://rayferric.xyz).
 
 Dziękuję za uwagę.
 
